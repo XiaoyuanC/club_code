@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="club.server.dao.ClubInfoDao">
+    <update id="addClubPeople" parameterType="string">
+        update club_info set club_people = club_people + 1 where club_code = #{clubCode} and club_exit = 1
+    </update>
+    <update id="subClubPeople" parameterType="string">
+        update club_info set club_people = club_people - 1 where club_code = #{clubCode} and club_exit = 1
+    </update>
+</mapper>
